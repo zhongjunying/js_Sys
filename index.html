@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="icon" href="./img/logo.ico">
+</head>
+<body>
+    <!-- 渲染页面 -->
+     <div class="wrapper_useer ">
+      <div class="head">
+        <img src="./img/logo.png" alt="渡一教育">
+        <span>js实现学生管理系统</span>
+    </div>
+    <div class="side">
+        <dl>
+            <dt>学生管理</dt>
+            <dd class="active" data-id="studentList" id="studentTable">学生列表</dd>
+            <dd data-id="addStudent">新增学生</dd>
+        </dl>
+    </div>
+     <div class="content">
+       <!-- 学生列表 -->
+         <div class="studentList change">
+             <table>
+                 <thead>
+                     <tr>
+                         <th>学号</th>
+                         <th>姓名</th>
+                         <th>性别</th>
+                         <th>邮箱</th>
+                         <th>年龄</th>
+                         <th>手机号</th>
+                         <th>住址</th>
+                         <th>操作</th>
+                     </tr>
+                 </thead>
+                 <tbody id="studentBody">
+                 </tbody>
+             </table>
+                <div class="page_wrapper">
+                  <button type="button" class="btn btn-primary" data-id="left_button">上一页</button>
+                 <button type="button" class="btn btn-primary" data-id="right_button">下一页</button>
+                </div>
+         </div>
+         <!-- 新增学生 -->
+         <div class="addStudent">
+             <form id="studentMessage">
+                 <div><label for="name">姓名</label><input type="text" id="name"></div>
+                 <div>
+                     <label>性别</label>
+                    <label for="male" class="sex">男</label><input type="radio" id="male" name="sex" value = '男' checked>
+                    <label for="female" class="sex">女</label><input type="radio" id="female" name="sex" value = '女'>
+                    
+                </div>
+                 <div><label for="number">学号</label><input type="text" id="number"></div>
+                 <div><label for="address">邮箱</label><input type="text" id="address"></div>
+                 <div><label for="birth">出生年</label><input type="text" id="birth"></div>
+                 <div><label for="iphone">手机号</label><input type="text" id="iphone"></div>
+                 <div><label for="location">住址</label><input type="text" id="location"></div>
+                  <div><input type="submit" class="submit"><input type="reset" class="reset"></div>
+             </form>
+         </div>
+          <!-- 编辑学生信息窗口 -->
+     <div class="editor_wrapper">
+        <div class="container" id="editor_window">
+            <form id="editor_form">
+              <div class="form-group has-success">
+                <input type="text" class="form-control" name="name" aria-describedby="helpBlock2" placeholder="姓名" >
+              </div>
+              <div class="form-group has-success">
+                <input type="text" class="form-control" name="sex" placeholder="性别">
+              </div>
+              <div class="form-group has-success">
+                <input type="text" class="form-control" name="number" placeholder="学号" disabled>
+              </div>
+              <div class="form-group has-success">
+                <input type="text" class="form-control" name="address" placeholder="邮箱">
+              </div>
+              <div class="form-group has-success">
+                <input type="text" class="form-control" name="birth" placeholder="出生年">
+              </div>
+              <div class="form-group has-success">
+                <input type="text" class="form-control" name="iphone" placeholder="手机号">
+              </div>
+              <div class="form-group has-success">
+                <input type="text" class="form-control" name="location" placeholder="住址">
+              </div>
+              <div class="form-group" style="text-align: center;">
+                <input type="submit"  class="btn btn-success" id="editor_submit"></input>
+              </div>
+            </form>
+            <canvas id="close_logo" width="24px" height="24px"></canvas>
+            </div>
+     </div>
+     </div>
+
+     </div>
+     <!-- 网站登录信息 -->
+     <div class="web_log_in open">
+            <div class="log_header">
+              <img src="./img/157648407062058.png">
+              <p>基本版 | English | 手机版 | 企业邮箱</p>
+            </div>
+             <div class="log_content">
+               <div class="bg_png">
+                 <img src="./img/tg-mj1e9c5d.jpg" alt="">
+               </div>
+               <div class="log_mesWrap">
+                 <div class="log_mes">
+                    <div class="log_mesHeader">
+                      <span data-id="log_regsister">注册</span>
+                      <span class="log_change" data-id="log_user">登录</span>
+                    </div> 
+                    <!-- 登录窗口的信息   -->
+                      <div class="log_user ">
+                        <form id="log_mes_form">
+                          <input type="text" placeholder="学生管理账号" id="log_account">
+                          <input type="password" placeholder="学生管理密码" id="log_password">
+                          <p><input type="checkbox" style="width: 15px;height: 15px;vertical-align: middle;margin: 0;" id="checkbox">下次登录记住密码</p>
+                          <input type="submit" value="登录" id="log_user_submit">
+                        </form>
+                      </div>
+                      <!-- 注册窗口的信息 -->
+                      <div class="log_regsister close">
+                        <form id="regsister_mes">
+                          <input type="text" placeholder="用户名" id="regsister_usename">
+                          <input type="text" placeholder="学生管理账号" id="regsister_account">
+                          <input type="password" placeholder="学生管理密码" id="regsister_password">
+                          <input type="password" placeholder="确认学生管理密码" id="regsister_repassword">
+                          <input type="submit" value="注册" id="regsister_submit">
+                        </form>
+                      </div>
+                 </div>
+
+               </div>
+             </div>
+           </div>
+     </div>
+     <!-- 进度条动画 -->
+     <div class="wrapper_loadLine close">
+      <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" id="loadLine" aria-valuenow="45"
+              aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+          </div>
+      </div>
+  </div>
+         <script src="./js/jquery.min.js"></script>
+         <script src="./js/index.js"></script>
+         <script src="./js/close_logo.canvas.js"></script>
+
+</body>
+</html>

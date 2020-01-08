@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body, 
+.wrapper_useer, 
+.web_log_in{
+    height: 100%;
+    -webkit-user-select: none;
+}
+.wrapper_useer{
+ display: none;
+}
+.web_log_in{
+    display: none;
+}
+.head{
+    height: 70px;
+    background-color: #354457;
+    line-height: 70px;
+    color: #fff;
+    padding-left: 20px;
+}
+.head img{
+    width: 40px;
+    vertical-align: middle;
+}
+.side{
+    float: left;
+    width: 200px;
+    height: calc(100% - 70px);
+    background-color: #4d5e70;
+}
+.side dl dt,
+.side dl dd{
+    box-sizing: border-box;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    color: #b3bcc5;
+    font-weight: bold
+}
+.side dl dd{
+    padding-left: 30px;
+    font-weight: 200
+}
+/*左侧栏选项选中的状态*/
+.side dl dd.active{
+    background-color: #ddd;
+    color: #354457;
+}
+.side dl dd:hover{
+    background-color: #ddd;
+    color: #354457;
+    cursor: pointer;
+}
+/*右边内容区*/
+.content{
+    position: relative;
+    float: left;
+    height: calc(100% - 70px);
+    width: calc(100% - 200px);
+    background-color: #eee;
+}
+.content .studentList,
+.content .addStudent{
+    width: 100%;
+    display: none;
+}
+.content div.change{
+    display: block;
+}
+/*学生列表*/
+.content .studentList table{
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+}
+.content .studentList table thead{
+    background-color: #e3e8ee;
+    color: #646987;
+}
+.content .studentList table tbody{
+    background-color: #fff;
+}
+.content .studentList table tbody button.edit,
+.content .studentList table tbody button.delete{
+    padding: 3px 10px;
+    color: #fff;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: 0 1px;
+}
+.content .studentList table tbody button.edit{
+    background-color: #5cb85c;
+}
+.content .studentList table tbody button.delete{
+    background-color: #c9302c;
+}
+/*新增学生列表*/
+.content .addStudent form{
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.content .addStudent form div{
+    padding: 8px 0;
+}
+.content .addStudent form div label{
+    display: inline-block;
+    padding-right: 5px;
+    width: 65px;
+    text-align: right;
+}
+.content .addStudent form div label.sex{
+    width: auto;
+}
+.content .addStudent form div input.submit,
+.content .addStudent form div input.reset{
+    width: 100px;
+    height: 30px;
+    margin: 0 10px;
+}
+/*编辑学生窗口*/
+.content .editor_wrapper{
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+#editor_window{
+    position: absolute;
+    width: 300px;
+    height: 404px;
+    padding-top: 15px;
+    border: 3px solid #3c763d;
+    border-radius: 10px;
+    background-color: #eee;
+    top: calc(50% - 235px);
+    left: calc(50% - 150px);
+}
+/*close_logo*/
+#close_logo{
+    position: absolute;
+    top: -13px;
+    right: -14px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    transform-origin: 12px 12px;
+}
+/*翻页按钮*/
+.page_wrapper{
+    text-align: center;
+    margin-top: 50px;
+}
+.page_wrapper button{
+    margin: 0 30px;
+}
+
+/*登录页面*/
+/*上部分*/
+.web_log_in .log_header{
+    position: relative;
+    width: 100%;
+    height: 62px;
+    border-bottom: 1px solid #d6dfea;
+    background: #eff4fa;
+}
+.web_log_in .log_header img{
+    height: 62px;
+}
+.web_log_in .log_header p{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: auto;
+    height: 62px;
+    line-height: 62px;
+    color:#1d5494 ;
+    cursor: pointer;
+}
+/*下部分*/
+.web_log_in .log_content{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 900px;
+    margin: auto;
+    height: calc(100% - 200px);
+    /* border: 1px solid black; */
+}
+.web_log_in .log_content div{
+    float: left;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+/*左边背景*/
+.web_log_in .log_content div.bg_png{
+    padding-top: 100px;
+    width: 500px;
+}
+/*右边登录信息*/
+.web_log_in .log_content div.log_mesWrap{
+    margin-top: 58px;
+    padding-left: 62px;
+    width: 398px;
+    border-radius: 10px;
+}
+.web_log_in .log_content div.log_mesWrap .log_mes{
+    width: 334px;
+    height: 387px;
+    border: 1px solid #a0b1c4;
+}
+div.log_mesWrap .log_mes .log_mesHeader{
+    border-bottom: 1px solid #a0b1c4;
+    height: 50px;
+    background-color: rgb(249,251,254);
+}
+div.log_mesWrap .log_mes .log_mesHeader span{
+    display: inline-block;
+    width: 164px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    color: #ccc;
+    cursor: pointer;
+}
+div.log_mesWrap .log_mes .log_mesHeader span.log_change{
+    color: #333;
+}
+div.log_mesWrap .log_mes .log_user,
+div.log_mesWrap .log_mes .log_regsister{
+    height: 335px;
+    padding: 30px 22px 0 25px;
+    /* border: 1px solid red; */
+}
+/*input文本输入框样式*/
+#log_account, 
+#log_password,
+#regsister_usename,
+#regsister_account,
+#regsister_password,
+#regsister_repassword{
+    border: none;
+    outline: none;
+    display: inline-block;
+    border: 1px solid #96a5b4;
+    padding-left: 10px;
+    width: 282px;
+    height: 38px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    background-color: rgb(232,240,254);
+}
+#log_user_submit,
+#regsister_submit{
+    border: none;
+    outline: none;
+    width: 282px;
+    height: 38px;
+    background-color: #5a98de;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+/*进度条*/
+
+.wrapper_loadLine {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.wrapper_loadLine .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 600px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*打开关闭*/
+.open{
+display: block;
+}
+.close{
+display: none;
+}
