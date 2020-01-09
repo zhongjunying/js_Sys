@@ -179,7 +179,7 @@ editor_submit.onclick = function(e){
 
 // cb: 成功获取数据之后执行的函数
 function transferData(url, param, cb,tpye) {
-    var result = saveData('http://api.duyiedu.com' + url, Object.assign({
+    var result = saveData('https://api.duyiedu.com' + url, Object.assign({
         appkey: "hang_1576385700592"
     }, param),tpye === 'post' ? 'post' : 'get');
 
